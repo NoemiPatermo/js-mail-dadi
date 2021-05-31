@@ -1,32 +1,3 @@
-/*var iscritti = ['Luca', 'Marco', 'Paolo'];
-var primoIscritto = iscritti [0];
-console.log('il primo iscritto è'+ primoIscritto);
-var numeroIscritti = iscritti.length;
-console.log('il numero di iscritti è' + numeroIscritti);
-var posizioneUltimoIscritto = iscritti.length - 1;
-var ultimoIscritto = iscritti[posizioneUltimoIscritto];
-console.log('ultimo iscritto è ' + ultimoIscritto);
-iscritti.push('pippo');
-var posizioneAggiornata = iscritti.length - 1;
-ultimoIscritto = iscritti[posizioneAggiornata];
-console.log('ultimo iscritto è ' + ultimoIscritto);
-//--------------------------------------
-var registrati = ['pippo', 'pluto','maria','pippina','giovanna', 'francesca'];
-var index = 0;
-console.log(registrati[index]);
-index++;
-console.log(registrati[index]);
-index++;
-console.log(registrati[index]);
-index++;
-console.log(registrati[index]);
-for (var i = 0; i < registrati.length; i++){
-    //console.log(registrati[i]);
-    document.getElementById('registrati-list').innerHTML += '<br/>' + registrati[i];
-}
-for (var i = 0; i <= 100; i++){
-    console.log(i);
-}*/
 
 //chiedi all'utente la sua mail
 var userEmail = prompt("inserisci la tua mail");
@@ -50,5 +21,7 @@ for (var i = 0; i < emailList.length; i++){
         check = true;
     }
 } if (check){
-    document
+    document.getElementById("login").innerHTML = "Login effettuato correttamente, benvenuto!";
+}else{
+    document.getElementById("login").innerHTML = "Accesso negato, email non corretta. Vuoi iscriverti?";
 }
