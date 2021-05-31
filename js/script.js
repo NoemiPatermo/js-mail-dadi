@@ -1,5 +1,6 @@
 
 //chiedi all'utente la sua mail
+/*
 var userEmail = prompt("inserisci la tua mail");
 
 //controlla che sia nella lista di chi può accedere
@@ -24,4 +25,23 @@ for (var i = 0; i < emailList.length; i++){
     document.getElementById("login").innerHTML = "Login effettuato correttamente, benvenuto!";
 }else{
     document.getElementById("login").innerHTML = "Accesso negato, email non corretta. Vuoi iscriverti?";
+}
+*/
+
+//GIOCO DEI DADI
+//GENERARE UN NUMERO RANDOM DA 1 A 6, SIA PER IL GIOCATORE SIA PER IL PC
+//STABILIRE IL VINCITORE IN BASE A CHI FA IL PUNTEGGIO PIù ALTO
+
+//Math.floor(Math.random()*10) + 1 mi da numero random intero da 1 a 10.
+var numPc = Math.floor(Math.random() * 6) + 1;
+var numUser = Math.floor(Math.random() * 6) + 1;
+if (numUser > numPc){
+    document.getElementById("login").innerHTML = "The winner is...complimenti!";
+}else { if (numPc = numUser){
+    document.getElementById("login").innerHTML = "Adesso siamo pari!";
+
+}else{
+    document.getElementById("login").innerHTML = "Sorry! Hai perso!";
+}
+
 }
