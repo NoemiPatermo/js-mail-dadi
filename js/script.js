@@ -8,7 +8,7 @@ var userEmail = prompt("inserisci la tua mail");
 var emailList = ['noemi.patermo@libero.it', 'blablabla@ciao.it', 'pincopallo@ciao.it', 'ciaone@ciao.it'];
 
 //imposto una variabile assegnandola come falsa 
-var check = false;
+var check = false;//oppure FLAG
 
 //inizio il ciclo for, il mio contatore ha valore iniziale di zero.
 //imposto la condizione per poter eseguire il codice, la condizione è vera se il contatore è minore alla lunghezza dell'array
@@ -18,12 +18,14 @@ var check = false;
 //se il mio contatore nella lista della mail si verifica strettamente uguale alla mail dello user
 // la variabile check sarà vera
 for (var i = 0; i < emailList.length; i++){
-    if(emailList[i] === userEmail){
+    if(userEmail === emailList[i]){
         check = true;
     }
-} if (check){
+} 
+//siamo fuori dal for
+if (check){
     document.getElementById("login").innerHTML = "Login effettuato correttamente, benvenuto!";
-}else{
+} else {
     document.getElementById("login").innerHTML = "Accesso negato, email non corretta. Vuoi iscriverti?";
 }
 
@@ -36,13 +38,14 @@ for (var i = 0; i < emailList.length; i++){
 /*
 var numPc = Math.floor(Math.random() * 6) + 1;
 var numUser = Math.floor(Math.random() * 6) + 1;
+//NON VOGLIAMO AVERE LO ZERO
+//ci interessa il range da 1  a 6
 
 if (numUser > numPc){ 
    document.getElementById("result").innerHTML = "The winner is...complimenti!";
-}else if(numUser = numPc){
+} else if(numUser = numPc){
     document.getElementById("result").innerHTML = "Adesso siamo pari!";
-}
-else{
+} else{
     document.getElementById("result").innerHTML = "Sorry...hai perso!";
 }
 */
